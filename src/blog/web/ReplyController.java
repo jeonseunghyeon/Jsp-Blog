@@ -29,15 +29,7 @@ public class ReplyController extends HttpServlet {
 	}
 	
 	protected void doProcess(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String cmd = request.getParameter("cmd");
 		
-		
-		if(cmd.equals("loginForm")) {
-			
-			
-		}else if(cmd.equals("login")) {
-			
-		}
 		
 	}
 
