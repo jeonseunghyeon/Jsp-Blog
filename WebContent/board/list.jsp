@@ -1,6 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
-<%
 
-	response.sendRedirect("board/list.jsp");
-%>
+<%@ include file="../layout/header.jsp" %>
+
+
+
+</body>
+</html>
