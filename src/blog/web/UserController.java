@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import blog.domain.user.UserDao;
 import blog.domain.user.dto.JoinReqDto;
 import blog.domain.user.dto.LoginReqDto;
 import blog.test.service.UserService;
@@ -65,7 +66,14 @@ public class UserController extends HttpServlet {
 			dto.setPassword(password);
 			dto.setEmail(email);
 			dto.setAddress(address);
-			userService.회원가입(dto);
+			System.out.println("회원가입"+dto);
+			int result = userService.회원가입(dto);
+			
+			if(result == 1) {
+				response.sendRedirect("index.jsp");
+			}else {
+				
+			}
 			
 		}
 		
