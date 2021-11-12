@@ -11,6 +11,7 @@ import blog.domain.user.UserDao;
 import blog.domain.user.dto.JoinReqDto;
 import blog.domain.user.dto.LoginReqDto;
 import blog.test.service.UserService;
+import blog.util.Script;
 
 
 @WebServlet("/user")
@@ -72,7 +73,7 @@ public class UserController extends HttpServlet {
 			if(result == 1) {
 				response.sendRedirect("index.jsp");
 			}else {
-				
+				Script.back(response, "회원가입 실패");
 			}
 			
 		}
